@@ -82,7 +82,7 @@ const AddMovie = ({ handleAdd }) => {
           </Modal.Body>
         </div>
         <Modal.Footer className="modalz">
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={handleClose} className="close-btn">
             Close
           </Button>
         </Modal.Footer>

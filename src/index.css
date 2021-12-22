@@ -9,6 +9,7 @@ body {
   color: rgb(104, 104, 104);
   font-family: "Poppins",sans-serif;
   margin: 0;
+  background-size: inherit;
 }
 
 .movie {
@@ -127,6 +128,12 @@ body {
   margin-right: 300 auto;
   margin-left: 380px;
   width: 18%;
+}
+.close-btn {
+  margin-top: 20px;
+  margin-right: 300 auto;
+  margin-left: 380px;
+  width: 18%
 }
 
 .delete-btn {
