@@ -1,8 +1,9 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import ReactStars from "react-rating-stars-component";
+import { Link } from "react-router-dom";
 
-const MovieCard = ({ movie , handleDelete }) => {
+const MovieCard = ({ movie, handleDelete }) => {
   return (
     <div>
       <Card className="movie" style={{ width: "18rem" }}>
@@ -19,10 +20,16 @@ const MovieCard = ({ movie , handleDelete }) => {
             />
           </Card.Text>
           <div className="buttons">
-            <Button variant="primary" className="watch-btn">
-              Watch Movie
-            </Button>
-            <Button variant="danger" className="delete-btn" onClick={()=> handleDelete(movie.id)}>
+            <Link to={`/moviedetails/${movie.id}`} className="details-btn">
+              <Button variant="primary" >
+                More Details
+              </Button>
+            </Link>
+            <Button
+              variant="danger"
+              className="delete-btn"
+              onClick={() => handleDelete(movie.id)}
+            >
               Delete
             </Button>
           </div>

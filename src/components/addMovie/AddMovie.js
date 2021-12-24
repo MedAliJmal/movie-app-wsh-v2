@@ -11,16 +11,20 @@ const AddMovie = ({ handleAdd }) => {
   const [date, setDate] = useState("");
   const [url, setUrl] = useState();
   const [rate, setRate] = useState(0);
+  const [trailer,setTrailer] = useState()
+  const [description,setDescription]=useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const newMovie = { id: Math.random(), title, date, rate, posterUrl: url };
-    if (title && date && url && rate) {handleAdd(newMovie);
+    if (title && date && url && rate && trailer && description) {handleAdd(newMovie);
         setDate("")
         setRate(0)
         setTitle("")
         setUrl()
+        setTrailer()
+        setDescription("")
         handleClose();}
         else alert("Field is empty, fill the blanks.")
   };
@@ -59,12 +63,28 @@ const AddMovie = ({ handleAdd }) => {
                 onChange={(e) => setUrl(e.target.value)}
                 value={url}
               />
+              <h4>Movie Description :</h4>{" "}
+              <input
+                type="text"
+                placeholder="Enter movie description"
+                className="form-control"
+                onChange={(e) => setDescription(e.target.value)}
+                value={date}
+              />
               <h4>Release Date:</h4>{" "}
               <input
                 type="text"
                 placeholder="Enter movie date"
                 className="form-control"
                 onChange={(e) => setDate(e.target.value)}
+                value={date}
+              />
+              <h4>Movie Trailer:</h4>{" "}
+              <input
+                type="text"
+                placeholder="Enter trailer URL"
+                className="form-control"
+                onChange={(e) => setTrailer(e.target.value)}
                 value={date}
               />
               <h4>Rating:</h4>{" "}

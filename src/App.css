@@ -7,6 +7,12 @@
   margin: 0 auto;
   height: 1400px;
   width: 100%;
+  background-image: url(https://pngimg.com/uploads/filmstrip/filmstrip_PNG100.png);
+  background-repeat: no-repeat;
+  background-size: 82%;
+  background-position-y: 850px;
+  background-position-x: -80px;
+  background-size: 120%;
   }
 
   .movielist {
